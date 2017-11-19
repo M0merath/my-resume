@@ -8,14 +8,14 @@ var bio = {
     name: "Kevin Lanzing",
     role: "Web Developer",
     contacts: {
-        mobile: "678-448-2814",
-        email: "klanzing@gmail.com",
-        github: "https://gist.github.com/M0merath",
-        location: "Sandy Springs, GA"
+        mobile: "<a href='tel:678-448-2814'>678-448-2814</a>",
+        email: "<a href='mailto:klanzing@gmail.com'>klanzing@gmail.com</a>",
+        github: "<a href='https://gist.github.com/M0merath'>https://gist.github.com/M0merath</a>",
+        location: "<a href='http://www.suwanee.com/'>Sandy Springs, GA</a>"
     },
     biopic: "https://media.licdn.com/mpr/mpr/shrinknp_200_200/p/8/000/203/11e/290fd62.jpg",
-    welcomeMessage: "Kevin is a teacher, game developer, and all-around cool guy!",
-    skills: [" Python", " Javascript", " Adobe Creative Suite", " HTML", " CSS"]
+    welcomeMessage: "Web Developer looking to help businesses produce sites, dashboards, and other interfaces to meet client needs.",
+    skills: ["Web Development <em>(HTML, CSS, Javascript)</em>", "Coding <em>(Python, Java)</em>", "Version Control <em>(Git Bash)</em>", "Graphic Design <em>(Photoshop, CorelDraw)</em>", "Teaching (College)"]
 };
 //var name = bio.name;
 //var formattedName = HTMLheaderName.replace("%data%", name);
@@ -41,13 +41,29 @@ var work = {
         "title": "Adjunct Instructor of American Government",
         "dates": "2010-2017",
         "location": "Acworth, GA",
-        "description": "Taught American Government in a college environment"
+        "description": "Taught American Government in a college environment. Online and on-site courses.",
+        "url": "http://www.chattahoocheetech.edu/"
+    }, {
+        "employer": "Clockwork Colossus Games",
+        "title": "Game Designer",
+        "dates": "2010-2013",
+        "location": "Buford, GA",
+        "description": "Designed, produced, and sold independent board games like Flash Point: Fire Rescue (later licensed to Indie Boards & Cards)",
+        "url": "http://indieboardsandcards.com/"
+    }, {
+        "employer": "Japan-America Society of Georgia",
+        "title": "Summer Intern",
+        "dates": "2008",
+        "location": "Atlanta, GA",
+        "description": "Assisted with planning of our annual JapanFest. Designed T-shirts for the event.",
+        "url": "http://www.jasgeorgia.org/"
     }, {
         "employer": "Target Roswell",
         "title": "Backroom Day Employee",
         "dates": "2009",
         "location": "Roswell, GA",
-        "description": "Stocked and stored inventory; retail work"
+        "description": "Stocked and stored inventory; retail work",
+        "url": "https://www.target.com/"
     }]
 };
 var education = {
@@ -74,16 +90,24 @@ var education = {
     }]
 };
 var projects = {
-    "projects": [{
-        "title": "Udacity Intro to Programming",
-        "description": "An online course on the fundamentals of programming, from HTML to CSS to Python and Javascript.",
+    "projects": [
+    {   "title": "Udacity Full-Stack Developer",
+        "description": "An online course on web development, version control, servers, and code refactoring. Est. completion: Dec 2017.",
         "dates": "2017",
-        "images": ["https://media.licdn.com/mpr/mpr/shrink_200_200/AAEAAQAAAAAAAAjXAAAAJDAzMmNlYmVjLTRmZmQtNGM5ZC1iMGJjLWM2MDUzZjhmZWI5Mg.png"]
+        "images": ["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTp4mpZdxeWyK-W1KcFCSBXmFRYAwmCN_cgcn8wEYAJRUbUrWrA"],
+        "url": "https://www.udacity.com/"
+    }, {
+        "title": "Udacity Intro to Programming",
+        "description": "An online course on the fundamentals of programming, from HTML to CSS to Python and Javascript. Completed in May.",
+        "dates": "2017",
+        "images": ["https://lh3.googleusercontent.com/-osRkx7imz2M/VrTxpdY6rhI/AAAAAAABGD4/CvoOSnNHPB8/s640/blogger-image-1553734871.jpg"],
+        "url": "https://www.udacity.com/"
     }, {
         "title": "Flash Point: Fire Rescue",
         "description": "A cooperative firefighting game for the whole family, designed by Kevin Lanzing (AKA: Me) and published by Indie Boards and Cards",
         "dates": "2011",
-        "images": ["http://www.theboardgamefamily.com/wp-content/uploads/2012/03/FlashPoint-all.jpg"]
+        "images": ["http://www.theboardgamefamily.com/wp-content/uploads/2012/03/FlashPoint-all.jpg"],
+        "url": "http://indieboardsandcards.com/"
     }]
 };
 //HTMLworkStart.replace("%data%", work[job]);
@@ -166,7 +190,7 @@ bio.display = function() {
 work.display = function() {
     for (var job = 0; job < work.jobs.length; job++) {
         $("#workExperience").append(HTMLworkStart);
-        formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
+        formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer).replace('#', work.jobs[job].url);
         formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
         formattedEmployerTitle = formattedEmployer + formattedTitle;
         $(".work-entry:last").append(formattedEmployerTitle);
@@ -183,7 +207,7 @@ projects.display = function() {
         //for (var project in projects.projects) {
         //  if (projects.projects.hasOwnProperty(project)) {
         $("#projects").append(HTMLprojectStart);
-        formattedTitle = HTMLprojectTitle.replace("%data%", projects.projects[project].title);
+        formattedTitle = HTMLprojectTitle.replace("%data%", projects.projects[project].title).replace('#', projects.projects[project].url);
         $(".project-entry:last").append(formattedTitle);
         formattedDates = HTMLprojectDates.replace("%data%", projects.projects[project].dates);
         $(".project-entry:last").append(formattedDates);
