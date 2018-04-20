@@ -103,20 +103,20 @@ var education = {
 };
 var projects = {
     "projects": [
-    {   "title": "Udacity Full-Stack Developer",
-        "description": "An online course on web development, version control, servers, and code refactoring. Est. completion: Dec 2017.",
-        "dates": "2017-2018",
-        "images": ["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTp4mpZdxeWyK-W1KcFCSBXmFRYAwmCN_cgcn8wEYAJRUbUrWrA"],
-        "url": "https://www.udacity.com/"
-    }, {
-        "title": "Udacity Intro to Programming",
-        "description": "An online course on the fundamentals of programming, from HTML to CSS to Python and Javascript. Completed in May.",
+    {   "title": "Gastronaut.com",
+        "description": "A recipe website, with login through Google+ and Facebook. Users can submit recipes, which are added to a growing database. Hosted on an Amazon Web Services server, with Ubuntu OS.",
         "dates": "2017",
-        "images": ["https://lh3.googleusercontent.com/-osRkx7imz2M/VrTxpdY6rhI/AAAAAAABGD4/CvoOSnNHPB8/s640/blogger-image-1553734871.jpg"],
+        "images": ["C:\\Users\\USER\\Documents\\Atom\\Web Dev Portfolio\\img\\gastronaut.png"],
+        "url": "https://gastronaut-com.herokuapp.com/"
+    }, {
+        "title": "Korean BBQ Finder",
+        "description": "Finds great Korean BBQ in Duluth, GA. Combines Google Maps and Foursquare API to find up-to-date restaurant data and plots locations to a map. Responsive design supports various screen sizes. Search function (using Knockout.js) updates the map in real-time.",
+        "dates": "2017",
+        "images": ["C:\\Users\\USER\\Documents\\Atom\\Web Dev Portfolio\\resume\\images\\Korean_BBQ_Finder.png"],
         "url": "https://www.udacity.com/"
     }, {
         "title": "Flash Point: Fire Rescue",
-        "description": "A cooperative firefighting game for the whole family, designed by Kevin Lanzing (AKA: Me) and published by Indie Boards and Cards",
+        "description": "A cooperative firefighting game for the whole family, designed by Kevin Lanzing (AKA: Me) and published by Indie Boards and Cards. Recently released (2018) as an app for PC and iOS.",
         "dates": "2011",
         "images": ["http://www.theboardgamefamily.com/wp-content/uploads/2012/03/FlashPoint-all.jpg"],
         "url": "http://indieboardsandcards.com/"
