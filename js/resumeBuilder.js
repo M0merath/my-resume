@@ -11,11 +11,11 @@ var bio = {
         mobile: "<a href='tel:678-448-2814'>678-448-2814</a>",
         email: "<a href='mailto:klanzing@gmail.com'>klanzing@gmail.com</a>",
         github: "<a href='https://gist.github.com/M0merath'>https://gist.github.com/M0merath</a>",
-        location: "<a href='http://www.suwanee.com/'>Sandy Springs, GA</a>"
+        location: "<a href='http://www.suwanee.com/'>Suwanee, GA</a>"
     },
-    biopic: "https://media.licdn.com/mpr/mpr/shrinknp_200_200/p/8/000/203/11e/290fd62.jpg",
-    welcomeMessage: "Web Developer looking to help businesses produce sites, dashboards, and other interfaces to meet client needs.",
-    skills: ["Web Development <em>(HTML, CSS, Javascript)</em>", "Coding <em>(Python, Java)</em>", "Version Control <em>(Git Bash)</em>", "Graphic Design <em>(Photoshop, CorelDraw)</em>", "Teaching (College)"]
+    biopic: "C:\\Users\\USER\\Documents\\Atom\\Web Dev Portfolio\\resume\\images\\me_in_cafe.jpg",
+    welcomeMessage: "Web Developer looking to help develop, maintain, and host web apps.",
+    skills: ["Web Development <em>(HTML, CSS, Javascript, Flask)</em>", "Coding <em>(Python, Java, C++)</em>", "Database <em>(SQLite, postgreSQL)</em>", "Graphic Design <em>(Photoshop, CorelDraw)</em>", "Teaching (College)"]
 };
 //var name = bio.name;
 //var formattedName = HTMLheaderName.replace("%data%", name);
@@ -39,7 +39,7 @@ var work = {
     "jobs": [{
         "employer": "Chattahoochee Technical College",
         "title": "Adjunct Instructor of American Government",
-        "dates": "2010-2017",
+        "dates": "2010-2018",
         "location": "Acworth, GA",
         "description": "Taught American Government in a college environment. Online and on-site courses.",
         "url": "http://www.chattahoocheetech.edu/"
@@ -83,17 +83,22 @@ var education = {
         "url": "http://www.gcsu.edu/"
     }],
     "onlineCourses": [{
+    	"title": "Full-Stack Developer Program",
+    	"school": "Udacity",
+    	"dates": "2017-2018",
+    	"url": "https://www.udacity.com/course/full-stack-web-developer-nanodegree--nd004"
+    }, {
         "title": "Intro to Programming",
         "school": "Udacity",
         "dates": "2017-2017",
-        "url": "udacity.com"
+        "url": "https://www.udacity.com/course/intro-to-programming-nanodegree--nd000"
     }]
 };
 var projects = {
     "projects": [
     {   "title": "Udacity Full-Stack Developer",
         "description": "An online course on web development, version control, servers, and code refactoring. Est. completion: Dec 2017.",
-        "dates": "2017",
+        "dates": "2017-2018",
         "images": ["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTp4mpZdxeWyK-W1KcFCSBXmFRYAwmCN_cgcn8wEYAJRUbUrWrA"],
         "url": "https://www.udacity.com/"
     }, {
@@ -224,36 +229,34 @@ projects.display = function() {
     //  }
 };
 education.display = function() {
-    //for (var institution in education.schools) {
-    //if (education.schools.hasOwnProperty(institution)) {
-    for (var institution = 0; institution < projects.projects.length; institution++) {
+    //for (var school in education.schools) {
+    //if (education.schools.hasOwnProperty(school)) {
+    for (var school = 0; school < education.schools.length; school++) {
         $("#education").append(HTMLschoolStart);
-        formattedSchool = HTMLschoolName.replace("%data%", education.schools[institution].name).replace('#', education.schools[institution].url);
+        formattedSchool = HTMLschoolName.replace("%data%", education.schools[school].name).replace('#', education.schools[school].url);
         //HTMLschoolName.replace('%data%', school.name).replace('#', school.url);
         $(".education-entry:last").append(formattedSchool);
-        formattedDates = HTMLschoolDates.replace("%data%", education.schools[institution].dates);
+        formattedDates = HTMLschoolDates.replace("%data%", education.schools[school].dates);
         $(".education-entry:last").append(formattedDates);
-        formattedMajor = HTMLschoolMajor.replace("%data%", education.schools[institution].majors);
+        formattedMajor = HTMLschoolMajor.replace("%data%", education.schools[school].majors);
         $(".education-entry:last").append(formattedMajor);
-        formattedDegree = HTMLschoolDegree.replace("%data%", education.schools[institution].degree);
+        formattedDegree = HTMLschoolDegree.replace("%data%", education.schools[school].degree);
         $(".education-entry:last").append(formattedDegree);
-        formattedLocation = HTMLschoolLocation.replace("%data%", education.schools[institution].location);
+        formattedLocation = HTMLschoolLocation.replace("%data%", education.schools[school].location);
         $(".education-entry:last").append(formattedLocation);
     }
     $("#education").append(HTMLonlineClasses);
-    $("#education").append(HTMLschoolStart);
-    //for (var course in education.onlineCourses) {
     for (var course = 0; course < education.onlineCourses.length; course++) {
-        //  if (education.onlineCourses.hasOwnProperty(course)) {
-        formattedOnlineTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[course].title);
+        $("#education").append(HTMLschoolStart);
+        formattedOnlineTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[course].title).replace('#', education.onlineCourses[course].url);
         $(".education-entry:last").append(formattedOnlineTitle);
-        formattedOnlineSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[course].school);
-        $(".education-entry:last").append(formattedOnlineSchool);
+        //formattedOnlineSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[course].school);
+        //$(".education-entry:last").append(formattedOnlineSchool);
         formattedOnlineDates = HTMLonlineDates.replace("%data%", education.onlineCourses[course].dates);
         $(".education-entry:last").append(formattedOnlineDates);
-        formattedOnlineURL = HTMLonlineURL.replace("%data%", education.onlineCourses[course].url);
-        $(".education-entry:last").append(formattedOnlineURL);
-        $(".education-entry:last").append(HTMLschoolStart);
+        //formattedOnlineURL = HTMLonlineURL.replace("%data%", education.onlineCourses[course].url);
+        //$(".education-entry:last").append(formattedOnlineURL);
+        //$(".education-entry:last").append(HTMLschoolStart);
     }
 };
 //  }

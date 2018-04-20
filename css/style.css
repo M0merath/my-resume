@@ -23,14 +23,14 @@ h6 {
 }
 h1 {
     font-size: 40px;
-    color: #f5a623;
+    color: #e09873;
     line-height: 48px;
     display: inline;
 }
 h2 {
     font-weight: bold;
     font-size: 24px;
-    color: #999;
+    color: #314570;
     line-height: 29px;
     padding: 10px;
 }
@@ -55,14 +55,14 @@ h5 {
 .date-text {
     font-style: italic;
     font-size: 14px;
-    color: #999;
+    color: #E09876;
     line-height: 16px;
     float: left;
 }
 .location-text {
     font-style: italic;
     font-size: 14px;
-    color: #999;
+    color: #E09873;
     line-height: 16px;
     float: right;
 }
@@ -72,7 +72,7 @@ p {
     line-height: 21px;
 }
 a {
-    color: #1199c3;
+    color: #aed1d6;
     text-decoration: none;
     margin-top: 10px;
     display: block;
@@ -84,33 +84,33 @@ a {
     line-height: 28px;
 }
 #skills-h3 {
-    color: #f5ae23;
+    color: #e09873;
     display: none;
 }
 .orange {
-    background-color: #f5ae23;
+    background-color: #E09873;
 }
 .orange-text {
-    color: #f5ae23;
+    color: #E09873;
 }
 .white-text {
     font-weight: bold;
     color: #fff;
 }
 .gray {
-    background-color: #f3f3f3;
+    background-color: #7584AD;
     padding-bottom: 10px;
     clear: both;
 }
 .dark-gray {
-    background-color: #4a4a4a;
+    background-color: #314570;
 }
 /* TODO: Replace with image later */
 
 #header {
     /*  background-color: #484848; */
 
-    background-color: #85929E;
+    background-color: #314570;
 }
 .flex-box {
     display: -webkit-flex;
@@ -126,6 +126,12 @@ a {
     flex-wrap: nowrap;
     padding: 10px;
 }
+.flex-item {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 10px;
+}
 .center-content {
     padding: 2.5% 5%;
 }
@@ -137,6 +143,10 @@ ul {
     padding: 10px;
     width: 200px;
     display: none;
+}
+.thumbnail {
+    padding: 10px;
+    width: 200px;
 }
 img {
     padding: 10px;
