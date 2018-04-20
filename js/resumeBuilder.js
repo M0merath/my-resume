@@ -14,7 +14,7 @@ var bio = {
         location: "<a href='http://www.suwanee.com/'>Suwanee, GA</a>"
     },
     biopic: "C:\\Users\\USER\\Documents\\Atom\\Web Dev Portfolio\\resume\\images\\me_in_cafe.jpg",
-    welcomeMessage: "Web Developer looking to help develop, maintain, and host web apps.",
+    welcomeMessage: "Web Developer with graphic design experience looking to help develop, maintain, and host web apps.",
     skills: ["Web Development <em>(HTML, CSS, Javascript, Flask)</em>", "Coding <em>(Python, Java, C++)</em>", "Database <em>(SQLite, postgreSQL)</em>", "Graphic Design <em>(Photoshop, CorelDraw)</em>", "Teaching (College)"]
 };
 //var name = bio.name;
@@ -74,6 +74,13 @@ var education = {
         "majors": ["International Affairs"],
         "degree": "MA",
         "url": "https://www.tamu.edu/"
+    }, {
+    	"name": "Kansai Gaidai University",
+    	"dates": "2005-2006",
+    	"location": "Hirakata, Japan",
+    	"majors": ["Political Science", "Asia Studies"],
+    	"degree": "Asia Studies Certificate",
+    	"url": "https://www.kansaigaidai.ac.jp/asp/"
     }, {
         "name": "Georgia College",
         "dates": "2003-2007",
