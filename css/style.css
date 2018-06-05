@@ -83,6 +83,17 @@ a {
     color: #f3f3f3;
     line-height: 28px;
 }
+.button {
+    /*min-height: 36px;
+    max-height: 48px;*/
+    max-width: 25%;
+    float: left;
+    cursor: pointer;
+    z-index: 9999;
+}
+.home-button {
+    
+}
 #skills-h3 {
     color: #e09873;
     display: none;
@@ -118,7 +129,7 @@ a {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
-    padding: 10px;
+    padding: 10%;
 }
 .flex-column {
     display: flex;
@@ -135,6 +146,7 @@ a {
 .center-content {
     padding: 2.5% 5%;
 }
+}
 ul {
     list-style-type: none;
 }
@@ -149,7 +161,7 @@ ul {
     width: 200px;
 }
 img {
-    padding: 10px;
+    padding: 1%;
 }
 span {
     padding: 5px;

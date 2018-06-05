@@ -10,31 +10,14 @@ var bio = {
     contacts: {
         mobile: "<a href='tel:678-448-2814'>678-448-2814</a>",
         email: "<a href='mailto:klanzing@gmail.com'>klanzing@gmail.com</a>",
-        github: "<a href='https://gist.github.com/M0merath'>https://gist.github.com/M0merath</a>",
+        github: "<a href='https://github.com/M0merath'>https://github.com/M0merath</a>",
         location: "<a href='http://www.suwanee.com/'>Suwanee, GA</a>"
     },
-    biopic: "C:\\Users\\USER\\Documents\\Atom\\Web Dev Portfolio\\resume\\images\\me_in_cafe.jpg",
+    biopic: "images/ME_Wedding.jpg",
     welcomeMessage: "Web Developer with graphic design experience looking to help develop, maintain, and host web apps.",
     skills: ["Web Development <em>(HTML, CSS, Javascript, Flask)</em>", "Coding <em>(Python, Java, C++)</em>", "Database <em>(SQLite, postgreSQL)</em>", "Graphic Design <em>(Photoshop, CorelDraw)</em>", "Teaching (College)"]
 };
-//var name = bio.name;
-//var formattedName = HTMLheaderName.replace("%data%", name);
-//var role = bio.role;
-//var formattedRole = HTMLheaderRole.replace("%data%", role);
-//var contact = bio.contact;
-//var formattedContact = HTMLemail.replace("%data%", contact);
-//var picture = bio.picture;
-//var formattedPicture = HTMLbioPic.replace("%data%", picture);
-//var welcome = bio.welcome;
-//var formattedWelcome = HTMLwelcomeMsg.replace("%data%", welcome);
-//var skills = bio.skills;
-//var formattedSkills = HTMLskills.replace("%data%", skills);
-//$("#header").append(formattedName);
-//$("#header").append(formattedRole);
-//$("#header").append(formattedContact);
-//$("#header").append(formattedPicture);
-//$("#header").append(formattedWelcome);
-//$("#header").append(formattedSkills);
+//
 var work = {
     "jobs": [{
         "employer": "Chattahoochee Technical College",
@@ -106,13 +89,13 @@ var projects = {
     {   "title": "Gastronaut.com",
         "description": "A recipe website, with login through Google+ and Facebook. Users can submit recipes, which are added to a growing database. Hosted on an Amazon Web Services server, with Ubuntu OS.",
         "dates": "2017",
-        "images": ["C:\\Users\\USER\\Documents\\Atom\\Web Dev Portfolio\\img\\gastronaut.png"],
+        "images": ["images/gastronaut.png"],
         "url": "https://gastronaut-com.herokuapp.com/"
     }, {
         "title": "Korean BBQ Finder",
         "description": "Finds great Korean BBQ in Duluth, GA. Combines Google Maps and Foursquare API to find up-to-date restaurant data and plots locations to a map. Responsive design supports various screen sizes. Search function (using Knockout.js) updates the map in real-time.",
         "dates": "2017",
-        "images": ["C:\\Users\\USER\\Documents\\Atom\\Web Dev Portfolio\\resume\\images\\Korean_BBQ_Finder.png"],
+        "images": ["images/Korean_BBQ_Finder.png"],
         "url": "https://www.udacity.com/"
     }, {
         "title": "Flash Point: Fire Rescue",
@@ -122,57 +105,8 @@ var projects = {
         "url": "http://indieboardsandcards.com/"
     }]
 };
-//HTMLworkStart.replace("%data%", work[job]);
-//replace("%data%",
-//function displayWork() {
-//  for (job in work){
-//      if (work.hasOwnProperty(job)) {
-//          $("#workExperience").append(HTMLworkStart);
-//          var formattedEmployer = HTMLworkEmployer.replace("%data%", work[job].employer);
-//          var formattedTitle = HTMLworkTitle.replace("%data%", work[job].title);
-//          var formattedEmployerTitle =
-//            formattedEmployer + formattedTitle;
-//          $(".work-entry:last").append(formattedEmployerTitle);
-//          var formattedDates = HTMLworkDates.replace("%data%", work[job].dates);
-//          $(".work-entry:last").append(formattedDates);
-//          var formattedDescription = HTMLworkDescription.replace("%data%", work[job].description);
-//          $(".work-entry:last").append(formattedDescription);
-//        }
-//      }
-//}
-//displayWork();
-//$("#main").append(work["position"]);
-//$("#main").append(education.name);
-//$(document).click(function(loc) {
-//  logClicks (event.pageX, event.pageY);
-//});
-//$("#lets-connect").append(internationalizeButton);
-//function inName() {
-//  var intlName = bio.name;
-//  var nameArray = intlName.split(" ");
-//nameArray[0] = nameArray[0].substr(0,1).toUpperCase() + nameArray.substr(1).toLowerCase();
-//  nameArray[1] = nameArray[1].toUpperCase();
-//  intlName = nameArray.join(" ");
-//  intlName = intlName[0].toUpperCase() + intlName.substr(1);
-//  var name = intlName;
-//  var formattedName = HTMLheaderName.replace("%data%", name);
-//  return formattedName
-//  var project1 = HTMLprojectStart.replace("%data%", name);
-//  var project2 = HTMLprojectStart.replace("%data%", name);
-//$("#header").append(formattedName);
-//}
+
 bio.display = function() {
-    //$("#header").append(HTMLheaderName);
-    //formattedRole = HTMLheaderRole.replace("%data%", bio.role);
-    //$(".bio-entry:last").append(formattedRole);
-    //formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
-    //$(".bio-entry:last").append(formattedMobile);
-    //formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
-    //$(".bio-entry:last").append(formattedEmail);
-    //formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
-    //$(".bio-entry:last").append(formattedGithub);
-    //formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
-    //$(".bio-entry:last").append(formattedLocation)
     var name = bio.name;
     var formattedName = HTMLheaderName.replace("%data%", name);
     var role = bio.role;
