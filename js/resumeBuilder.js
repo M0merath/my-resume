@@ -1,9 +1,4 @@
-/*
-This is empty on purpose! Your code to build the resume will go here.
- */
 $("#mapDiv").append(googleMap);
-// bio["city"] = "Sandy Springs";
-// $("#main").append(bio["city"]);
 var bio = {
     name: "Kevin Lanzing",
     role: "Web Developer",
@@ -150,8 +145,6 @@ work.display = function() {
 };
 projects.display = function() {
     for (var project = 0; project < projects.projects.length; project++) {
-        //for (var project in projects.projects) {
-        //  if (projects.projects.hasOwnProperty(project)) {
         $("#projects").append(HTMLprojectStart);
         formattedTitle = HTMLprojectTitle.replace("%data%", projects.projects[project].title).replace('#', projects.projects[project].url);
         $(".project-entry:last").append(formattedTitle);
@@ -160,22 +153,15 @@ projects.display = function() {
         formattedDescription = HTMLprojectDescription.replace("%data%", projects.projects[project].description);
         $(".project-entry:last").append(formattedDescription);
         for (imageCount = 0; imageCount < projects.projects[project].images.length; imageCount++) {
-            //projects.projects[project].images.forEach(function(image) {
             formattedImage = HTMLprojectImage.replace("%data%", projects.projects[project].images);
             $(".project-entry:last").append(formattedImage);
         }
-        //formattedImage = HTMLprojectImage.replace("%data%", projects.projects[project].images);
-        //$(".project-entry:last").append(formattedImage);
     }
-    //  }
 };
 education.display = function() {
-    //for (var school in education.schools) {
-    //if (education.schools.hasOwnProperty(school)) {
     for (var school = 0; school < education.schools.length; school++) {
         $("#education").append(HTMLschoolStart);
         formattedSchool = HTMLschoolName.replace("%data%", education.schools[school].name).replace('#', education.schools[school].url);
-        //HTMLschoolName.replace('%data%', school.name).replace('#', school.url);
         $(".education-entry:last").append(formattedSchool);
         formattedDates = HTMLschoolDates.replace("%data%", education.schools[school].dates);
         $(".education-entry:last").append(formattedDates);
@@ -190,17 +176,12 @@ education.display = function() {
     for (var course = 0; course < education.onlineCourses.length; course++) {
         $("#education").append(HTMLschoolStart);
         formattedOnlineTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[course].title).replace('#', education.onlineCourses[course].url);
-        $(".education-entry:last").append(formattedOnlineTitle);
-        //formattedOnlineSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[course].school);
-        //$(".education-entry:last").append(formattedOnlineSchool);
+        formattedOnlineSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[course].school);
+        $(".education-entry:last").append(formattedOnlineTitle+formattedOnlineSchool);
         formattedOnlineDates = HTMLonlineDates.replace("%data%", education.onlineCourses[course].dates);
         $(".education-entry:last").append(formattedOnlineDates);
-        //formattedOnlineURL = HTMLonlineURL.replace("%data%", education.onlineCourses[course].url);
-        //$(".education-entry:last").append(formattedOnlineURL);
-        //$(".education-entry:last").append(HTMLschoolStart);
     }
 };
-//  }
 bio.display();
 work.display();
 projects.display();

@@ -84,8 +84,8 @@ a {
     line-height: 28px;
 }
 .button {
-    /*min-height: 36px;
-    max-height: 48px;*/
+    min-height: 36px;
+    max-height: 48px;
     max-width: 25%;
     float: left;
     cursor: pointer;
